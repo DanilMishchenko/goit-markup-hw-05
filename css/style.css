@@ -115,6 +115,7 @@ header {
 
 .site-nav .link {
   color: var(--title-text-color);
+  transition: 250ms var(--time-function);
 }
 
 /* Контакты шапки */
@@ -148,6 +149,7 @@ header {
 .contacts-header .link {
   display: flex;
   align-items: center;
+  transition: 250ms var(--time-function);
 }
 
 /* Герой */
@@ -258,7 +260,7 @@ header {
   fill: #000000;
   background-color: #ffffff;
   border: 1px solid var(--modal-close-button-border-color);
-  transition: fill 500ms var(--time-function);
+  transition: fill 250ms var(--time-function);
 }
 
 /* Особенности */
@@ -304,8 +306,29 @@ header {
   display: flex;
 }
 
+.directions-list li {
+  position: relative;
+}
+
 .directions-list li:not(:last-child) {
   margin-right: 30px;
+}
+
+.direction-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-color);
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* Секция Наша Команда */
@@ -364,7 +387,24 @@ header {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+
+  fill: var(--main-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: 250ms var(--time-function);
+}
+
+.team .social-icon a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
   fill: #afb1b8;
+  background-color: var(--main-color);
+  transition: 250ms var(--time-function), background-color 250ms var(--time-function);
 }
 
 .social-icon a:hover,
@@ -399,6 +439,7 @@ header {
   fill: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: 250ms var(--time-function);
 }
 
 .client-list a:hover,
@@ -439,6 +480,7 @@ header {
 
 .contacts-fooder a {
   color: var(--footer-contacts-text-color);
+  transition: 250ms var(--time-function);
 }
 
 .fooder .info {
@@ -459,15 +501,8 @@ header {
   color: var(--main-color);
 }
 
-.social-icon a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  fill: #afb1b8;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
 /* Портфолио */
+
 .content-selector {
   display: flex;
   justify-content: center;
@@ -490,6 +525,7 @@ header {
   padding: 6px 22px;
   border: 0px;
   letter-spacing: 0.03em;
+  transition: 250ms var(--time-function), background-color 250ms var(--time-function);
 }
 
 .content-selector button:hover,
@@ -558,7 +594,7 @@ header {
   color: #fff;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-  transition: transform 250ms;
+  transition: transform 250ms var(--time-function);
 }
 
 .project-link:hover .project-overlay,
